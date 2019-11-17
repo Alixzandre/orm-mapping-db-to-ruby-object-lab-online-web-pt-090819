@@ -10,11 +10,12 @@ class Student
   end
 
   def self.all
-    sql = <<-SQL 
-      SELECT * FROM students
+    sql = <<-SQL
+      SELECT *
+      FROM songs
     SQL
-    
-    DB[:conn].execute(sql).map do |row| 
+ 
+    DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end
   end

@@ -32,7 +32,7 @@ class Student
     end
   end
   
-  def
+  def self.all_students_in_grade_9
 
   def self.find_by_name(name)
     sql = <<-SQL
